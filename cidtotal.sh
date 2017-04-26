@@ -162,22 +162,22 @@ do
 
       # Show bandwidth information with proper unit
       if [ "$bandwidth" -lt 1000 ]; then
-        echo `date -r ${array_time[$i]} "+%Y/%m/%e"` $bandwidth"Byte"
+        echo `date -r ${array_time[$i]} "+%Y/%m/%d"` $bandwidth"Byte"
       elif [ "$bandwidth" -lt 1000000 ]; then
         bandwidth=`echo "scale=2; ${bandwidth} / 1000" | bc`
-        echo `date -r ${array_time[$i]} "+%Y/%m/%e"` $bandwidth"KB"
+        echo `date -r ${array_time[$i]} "+%Y/%m/%d"` $bandwidth"KB"
       elif [ "${array_band[$i]}" -lt 1000000000 ]; then
         bandwidth=`echo "scale=2; ${bandwidth} / 1000000" | bc`
-        echo `date -r ${array_time[$i]} "+%Y/%m/%e"` $bandwidth"MB"
+        echo `date -r ${array_time[$i]} "+%Y/%m/%d"` $bandwidth"MB"
       elif [ "${array_band[$i]}" -lt 1000000000000 ]; then
         bandwidth=`echo "scale=2; ${bandwidth} / 1000000000" | bc`
-        echo `date -r ${array_time[$i]} "+%Y/%m/%e"` $bandwidth"GB"
+        echo `date -r ${array_time[$i]} "+%Y/%m/%d"` $bandwidth"GB"
       elif [ "${array_band[$i]}" -lt 1000000000000000 ]; then
         bandwidth=`echo "scale=2; ${bandwidth} / 1000000000000" | bc`
-        echo `date -r ${array_time[$i]} "+%Y/%m/%e"` $bandwidth"TB"
+        echo `date -r ${array_time[$i]} "+%Y/%m/%d"` $bandwidth"TB"
       else
         bandwidth=`echo "scale=2; ${bandwidth} / 1000000000000000" | bc`
-        echo `date -r ${array_time[$i]} "+%Y/%m/%e"` $bandwidth"PB"
+        echo `date -r ${array_time[$i]} "+%Y/%m/%d"` $bandwidth"PB"
       fi
     done
 

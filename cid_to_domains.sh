@@ -59,3 +59,7 @@ fi
 
 done < temp.txt
 
+### Remove temp.txt
+if [ -e temp.txt ]; then
+  rm temp.txt
+fi

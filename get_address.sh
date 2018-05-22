@@ -99,7 +99,7 @@ do
           "$owner_id" ) 
             if [ ${array_userid[$i]} = $billing_contact_id ]; then
               echo ${array_logins[$i]} "<-Owner and Billing Contact"
-              EMAILS=$EMAILS${array_logins[$i]}
+              EMAILS=$EMAILS" "${array_logins[$i]}
             else 
               echo ${array_logins[$i]} "<-Owner"
               EMAILS=$EMAILS" "${array_logins[$i]}
